@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.MailClient.SendEmailWindows">
+  <VBox layoutX="2.0" layoutY="0.0" prefHeight="321.0" prefWidth="600.0" spacing="5">
+      <GridPane hgap="8" vgap="8"
+                style="-fx-padding:10 0 0 0">
+          <children>
+              <Label text="收件人"
+              style="-fx-font: NORMAL 14 Tahoma;"
+              GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+              <Label text="主题"
+                     style="-fx-font: NORMAL 14 Tahoma;"
+                     GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+              <TextField fx:id="reciver" prefColumnCount="20"
+              GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+              <TextField fx:id="subject" prefColumnCount="20"
+                         GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+          </children>
+      </GridPane>
+
+      <Label text="正文内容"></Label>
+    <TextArea fx:id="text" />
+      <HBox spacing="5">
+          <Label text="附件"></Label>
+          <Button id="file" layoutX="0.0" layoutY="346.0" onAction="#openFile" text="选择文件" />
+          <Button id="delefile" onAction="#deleteFile" text="删除"/>
+      </HBox>
+      <TextArea fx:id="attach"></TextArea>
+  </VBox>
+  <Button id="send" layoutX="484.0" layoutY="346.0" onAction="#sendEmail" text="发送邮件" />
+</AnchorPane>

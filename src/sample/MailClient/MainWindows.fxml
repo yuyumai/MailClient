@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.MailClient.MainWindows"
+            prefHeight="400.0" prefWidth="650.0">
+<HBox spacing="10">
+    <TextArea fx:id="mailText" prefHeight="400"></TextArea>
+    <VBox spacing="5">
+        <Label fx:id="mailAmount"></Label>
+        <Label text="查看邮件（输入数字）"></Label>
+        <TextField fx:id="emailNo" prefWidth="40"></TextField>
+        <Button id="submit" onAction="#submit" text="确认"></Button>
+        <Button id="delete" onAction="#deleteEmail" text="删除邮件"></Button>
+        <Button id="sendEmail" onAction="#sendEmail" text="发邮件"></Button>
+    </VBox>
+</HBox>
+</AnchorPane>
